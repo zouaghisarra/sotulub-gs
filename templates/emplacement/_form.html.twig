@@ -1,0 +1,5 @@
+{{ form_start(form) }}
+    {{ form_row(form.ref) }}
+    {{ form_row(form.rayon) }}
+    <button class="btn btn-success">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}

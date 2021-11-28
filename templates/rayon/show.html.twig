@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rayon{% endblock %}
+
+{% block body %}
+<div id="layoutSidenav_content">
+    <table class="table">
+        <tbody>
+          
+            <tr>
+                <th>Ref</th>
+                <td>{{ rayon.ref }}</td>
+                <td> </td>
+            </tr>
+             <tr>
+                <td><a href="{{ path('rayon_index') }}" class="btn btn-secondary">retour à la liste</a></td>
+                <td><a href="{{ path('rayon_edit', {'id': rayon.id}) }}" class="btn btn-success">modification</a></td>
+                <td>{{ include('rayon/_delete_form.html.twig') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+   
+
+    
+
+</div>
+{% endblock %}

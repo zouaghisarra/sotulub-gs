@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bien{% endblock %}
+
+{% block body %}
+<div id="layoutSidenav_content">
+   
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ bien.id }}</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Ref</th>
+                <td>{{ bien.ref }}</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ bien.description }}</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Unite</th>
+                <td>{{ bien.unite }}</td>
+            </tr>
+              <tr>
+                <td><a href="{{ path('bien_index') }}" class="btn btn-secondary">retour à la liste</a></td>
+                <td><a href="{{ path('bien_edit', {'id': bien.id}) }}" class="btn btn-success">modification</a></td>
+                <td>{{ include('bien/_delete_form.html.twig') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+
+    
+
+    
+</div>
+{% endblock %}

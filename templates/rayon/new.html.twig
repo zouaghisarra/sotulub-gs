@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Rayon{% endblock %}
+{%form_theme form 'bootstrap_4_layout.html.twig'%}
+{% block body %}
+<div id="layoutSidenav_content">
+<div>
+    <h1>Creation d'un rayon</h1>
+
+    {{ include('rayon/_form.html.twig') }}
+
+    <a href="{{ path('rayon_index') }}" class="btn btn-secondary">retour à la liste</a>
+</div>
+</div>
+{% endblock %}

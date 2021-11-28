@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Emplacement index{% endblock %}
+
+{% block body %}
+<div id="layoutSidenav_content">
+      <main>
+                    <div class="container-fluid px-4">
+                        <div class="card mb-4">  
+                         <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Tableau des utilisateurs
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple"> 
+
+        <thead>
+            <tr>
+               
+                <th>Ref</th>
+                <th>Rayon</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for emplacement in emplacements %}
+            <tr>
+                
+                <td>{{ emplacement.ref }}</td>
+                <td>{{ emplacement.rayon }}</td>
+                <td>
+                    <a href="{{ path('emplacement_show', {'id': emplacement.id}) }}" class="btn btn-info">info</a>
+                    <a href="{{ path('emplacement_edit', {'id': emplacement.id}) }}" class="btn btn-success">modification</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+         <tfoot>
+        <tr><a href="{{ path('emplacement_new') }}" class="btn btn-primary">nouveau d'emplacement</a></tr>
+        
+        </tfoot>
+    </table>
+                             </div>    
+                        </div>
+                    </div>
+            </main> 
+
+    
+</div>
+{% endblock %}

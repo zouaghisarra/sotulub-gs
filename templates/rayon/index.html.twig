@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rayon index{% endblock %}
+
+{% block body %}
+<div id="layoutSidenav_content">
+     <main>
+                    <div class="container-fluid px-4">
+                        <div class="card mb-4">  
+                         <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Tableau des rayons
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+
+    
+        <thead>
+            <tr>
+                
+                <th>Ref</th>
+                <th>Magasin</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for rayon in rayons %}
+            <tr>
+                
+                <td>{{ rayon.ref }}</td>
+                <td>{{rayon.magasin}}</td>
+                <td>
+                    <a href="{{ path('rayon_show', {'id': rayon.id}) }}" class="btn btn-info">info</a>
+                    <a href="{{ path('rayon_edit', {'id': rayon.id}) }}" class="btn btn-success">modification</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+         <tfoot>
+        <tr><a href="{{ path('rayon_new') }}" class="btn btn-primary">nouveau rayon</a></tr>
+        
+        </tfoot>
+    </table>
+           </div>    
+                        </div>
+                    </div>
+            </main> 
+
+    
+</div>
+{% endblock %}

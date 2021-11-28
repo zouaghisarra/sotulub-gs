@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Magasin{% endblock %}
+
+{% block body %}
+ <div id="layoutSidenav_content">
+
+    <table class="table">
+        <tbody>
+          
+            <tr>
+                <th>Annotation</th>
+                <td>{{ magasin.annotation }}</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ magasin.description }}</td>
+                <td> </td>
+            </tr>
+             <tr>
+                <td><a href="{{ path('magasin_index') }}" class="btn btn-secondary">retour à la liste</a></td>
+                <td> <a href="{{ path('magasin_edit', {'id': magasin.id}) }}" class="btn btn-success">modification</a></td>
+                <td>{{ include('magasin/_delete_form.html.twig') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+
+</div>
+{% endblock %}

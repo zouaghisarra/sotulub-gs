@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% block title %}New Operation{% endblock %}
+
+{% block body %}
+<div id="layoutSidenav_content">
+<div>
+    <h1>Création d'une operation</h1>
+
+    {{ include('operation/_form.html.twig') }}
+
+    <a href="{{ path('operation_index') }}" class="btn btn-secondary">retour à la liste</a>
+  </div>  
+
+</div>
+{% endblock %}

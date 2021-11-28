@@ -1,0 +1,6 @@
+{{ form_start(form) }}
+    {{ form_row(form.ref, { 'label': 'Référence' }) }}
+    {{ form_row(form.type, { 'label': 'Type' }) }}
+    {{ form_row(form.user, { 'label': 'Utilisateur' }) }}
+    <button class="btn btn-success">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}

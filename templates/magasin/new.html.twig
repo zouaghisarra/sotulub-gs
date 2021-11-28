@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Magasin{% endblock %}
+{%form_theme form 'bootstrap_4_layout.html.twig'%}
+{% block body %}
+<div id="layoutSidenav_content">
+<div>
+    <h1>Création d'une magasin</h1>
+
+    {{ include('magasin/_form.html.twig') }}
+
+    <a href="{{ path('magasin_index') }}" class="btn btn-secondary">retour de la liste</a>
+    </div>
+</div>
+{% endblock %}

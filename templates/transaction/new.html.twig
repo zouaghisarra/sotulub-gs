@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Transaction{% endblock %}
+
+{% block body %}
+<div id="layoutSidenav_content">
+<div>
+    <h1>nouvelle transaction</h1>
+
+    {{ include('transaction/_form.html.twig') }}
+
+    <a href="{{ path('transaction_index') }}" class="btn btn-secondary">retour à la liste</a>
+</div>
+</div>    
+{% endblock %}

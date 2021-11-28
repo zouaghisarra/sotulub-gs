@@ -1,0 +1,12 @@
+{{ form_start(form) }}
+    
+    {{ form_row(form.lastname, { 'label': 'Nom' }) }}
+    {{ form_row(form.firstname, { 'label': 'Prenom' }) }}
+    {{ form_row(form.email, { 'label': 'Email' }) }}
+    {{ form_row(form.password, { 'label': 'mot de passe' }) }}
+    {{ form_row(form.confirm_password, { 'label': 'confirmation mot de passe' }) }}
+    
+    <button class="btn btn-success">{{ button_label|default('Enregistrer') }}</button>
+
+
+{{ form_end(form) }}

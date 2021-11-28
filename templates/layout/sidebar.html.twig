@@ -1,0 +1,47 @@
+<div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading"></div>
+                            <a class="nav-link" href="{{ path('home') }}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
+                                Accueil
+                            </a>
+                            {% if is_granted('ROLE_ADMIN') %}
+                            <a class="nav-link" href="{{ path('user_index') }}">
+                                <div class="sb-nav-link-icon"><i class="fa fa-user"></i></div>
+                                Utilisateur
+                            </a>
+                            {% endif %}
+                            <a class="nav-link" href="{{ path('bien_index') }}">
+                                <div class="fa fa-cubes"><i class=""></i></div>
+                                Biens
+                            </a>
+                            <a class="nav-link" href="{{ path('operation_index') }}">
+                                <div class="fa fa-calculator"><i class=""></i></div>
+                                Opération
+                            </a>
+                            <a class="nav-link" href="{{ path('transaction_index') }}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-exchange-alt"></i></div>
+                                Transaction
+                            </a>
+                            <a class="nav-link" href="{{ path('magasin_index') }}">
+                                <div class="sb-nav-link-icon"><i class="fa fa-shopping-cart"></i></div>
+                                Magasin
+                            </a>
+                            <a class="nav-link" href="{{ path('rayon_index') }}">
+                                <div class="sb-nav-link-icon"><i class="fa fa-shopping-basket"></i></div>
+                                Rayon
+                            </a>
+                            <a class="nav-link" href="{{ path('emplacement_index') }}">
+                                <div class="sb-nav-link-icon"><i class="fa fa-square"></i></div>
+                                Emplacement
+                            </a>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                    
+                </nav>
+            </div>

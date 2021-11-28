@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Emplacement{% endblock %}
+
+{% block body %}
+<div id="layoutSidenav_content">
+<div>
+    <h1>Creation d'un emplacement</h1>
+
+    {{ include('emplacement/_form.html.twig') }}
+
+    <a href="{{ path('emplacement_index') }}" class="btn btn-secondary">retour à la liste</a>
+</div>
+</div>
+{% endblock %}

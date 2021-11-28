@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Magasin{% endblock %}
+
+{% block body %}
+<div id="layoutSidenav_content">
+<div>
+    <h1>Modification Magasin</h1>
+
+    {{ include('magasin/_form.html.twig', {'button_label': 'Enregistrer'}) }}
+
+    <a href="{{ path('magasin_index') }}" class="btn btn-secondary">retour à la liste</a>
+
+    {{ include('magasin/_delete_form.html.twig') }}
+    </div>
+</div>
+{% endblock %}

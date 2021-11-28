@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Transaction{% endblock %}
+
+{% block body %}
+<div id="layoutSidenav_content">
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Qte</th>
+                <td>{{ transaction.qte }}</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Magasin_source</th>
+                <td>{{ transaction.magasinSource }}</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Magasin_distination</th>
+                <td>{{ transaction.magasinDistination }}</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Prix_unitaire</th>
+                <td>{{ transaction.prixUnitaire }}</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Prix_totale</th>
+                <td>{{ transaction.prixTotale }}</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="{{ path('transaction_index') }}"class="btn btn-secondary">retour à la liste des utilisteurs</a></td>
+                <td><a href="{{ path('transaction_edit', {'id': transaction.id}) }}"class="btn btn-success">modification</a></td>
+                <td>{{ include('transaction/_delete_form.html.twig') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+
+    
+
+    
+</div>
+{% endblock %}

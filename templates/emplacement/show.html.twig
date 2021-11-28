@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Emplacement{% endblock %}
+
+{% block body %}
+    <div id="layoutSidenav_content">
+
+    <table class="table">
+        <tbody>
+         
+            <tr>
+                <th>Ref</th>
+                <td>{{ emplacement.ref }}</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Rayon</th>
+                <td>{{ emplacement.rayon }}</td>
+                <td></td>
+            </tr>
+            <tr>
+             <td><a href="{{ path('emplacement_index') }}" class="btn btn-secondary">back to list</a></td>
+             <td><a href="{{ path('emplacement_edit', {'id': emplacement.id}) }}" class="btn btn-success">modification</a></td>
+             <td>{{ include('emplacement/_delete_form.html.twig') }}</td>
+
+    
+
+    
+            </tr>
+        </tbody>
+    </table>
+</div>  
+
+   
+{% endblock %}

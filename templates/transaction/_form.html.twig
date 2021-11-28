@@ -1,0 +1,48 @@
+
+
+{{ form_start(form) }}
+    {{ form_row(form.bien) }}
+    {{ form_row(form.operation) }}
+    {{ form_row(form.qte) }}
+    
+    {{ form_row(form.prix_unitaire) }}
+
+    <div style="display: none;" class="block_magasin_source">
+    {{ form_row(form.magasin_source) }}
+    </div>
+    <div style="display: none;" class="block_magasin_distination">
+    {{ form_row(form.magasin_distination) }}
+    </div>
+    
+    <button class="btn btn-success">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}
+{% block javascripts %}
+    
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            
+    <script>
+    jQuery( document ).ready(function() {
+    jQuery('#transaction_operation').on('change', function() {
+    if( $(this).find("option:selected").text() == 'entree' ){
+        
+        jQuery('.block_magasin_distination').show();
+        jQuery('.block_magasin_source').hide();
+    }
+    else if( $(this).find("option:selected").text() == 'sortie'){
+        
+        jQuery('.block_magasin_distination').hide();
+        jQuery('.block_magasin_source').show();
+    }
+    else {
+        jQuery('.block_magasin_distination').show();
+        jQuery('.block_magasin_source').show();
+    }
+    ;})
+
+    console.log( "ready!" );
+});
+ 
+</script>
+{% endblock %}
+
